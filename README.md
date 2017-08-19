@@ -8,16 +8,13 @@
 package main
 
 import(
-	"flag"
 	"fmt"
 	"github.com/zypperin/godanmu"
 )
-var roomid = flag.String("room", "67373", "房间号")
 
 func main() {
-  flag.Parse()
   client := &godanmu.Client{
-	Rid:*roomid,
+	Rid:"67373",
 	Fn:onMsg,
   }
   client.Run()
